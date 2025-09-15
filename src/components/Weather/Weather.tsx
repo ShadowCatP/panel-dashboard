@@ -1,8 +1,8 @@
 // TODO Weather widget. Background matching current conditions.
 
 import { useQuery } from "@tanstack/react-query";
-import { wmoWeatherCodes } from "../types";
-import { parseDate } from "../lib/utils";
+import { wmoWeatherCodes } from "./types";
+import { parseDate } from "../../lib/utils";
 
 const getWeather = async () => {
   const data = await fetch(
