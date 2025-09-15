@@ -1,15 +1,14 @@
 // TODO Weather widget. Background matching current conditions.
 
 import { useQuery } from "@tanstack/react-query";
-import { wmoWeatherCodes } from "./types";
+import { wmoWeatherCodes, type WeatherResponse } from "./types";
 import { parseDate } from "../../lib/utils";
 
 const getWeather = async () => {
-  const data = await fetch(
+  const res = await fetch(
     "https://api.open-meteo.com/v1/forecast?latitude=51.1&longitude=17.0333&current=temperature_2m,weather_code,wind_speed_10m",
   );
-  const res = await data.json();
-  return res;
+  return (await res.json()) as WeatherResponse;
 };
 
 export const Weather = () => {
@@ -31,7 +30,12 @@ export const Weather = () => {
         {data?.current.wind_speed_10m}
         {data?.current_units.wind_speed_10m}
       </div>
-      <div>Last Refresh - {parseDate(new Date(data?.current.time), true)}</div>
+      <div>
+        Last Refresh -{" "}
+        {data?.current.time
+          ? parseDate(new Date(data.current.time), true)
+          : "N/A"}
+      </div>
     </div>
   );
 };
