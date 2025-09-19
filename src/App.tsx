@@ -1,7 +1,7 @@
-import { Clock } from "./components/Clock/Clock";
-import { Links } from "./components/Links/Links";
-import { Notes } from "./components/Notes/Notes";
-import { Weather } from "./components/Weather/Weather";
+import { Clock } from "./components/widgets/Clock/Clock";
+import { Links } from "./components/widgets/Links/Links";
+import { Notes } from "./components/widgets/Notes/Notes";
+import { Weather } from "./components/widgets/Weather/Weather";
 
 export const App = () => {
   return (

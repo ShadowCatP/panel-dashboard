@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { wmoWeatherCodes, type WeatherResponse } from "./types";
-import { parseDate } from "../../lib/utils";
+import { parseDate } from "../../../lib/utils";
 
 const getWeather = async () => {
   const res = await fetch(

@@ -1,7 +1,7 @@
 // TODO Clock widget. Toggling 12/24h format. Analog/Digital variants
 
 import { useEffect, useState } from "react";
-import { parseDate } from "../../lib/utils";
+import { parseDate } from "../../../lib/utils";
 
 export const Clock = () => {
   const [is24Format, setIs24Format] = useState(false);
