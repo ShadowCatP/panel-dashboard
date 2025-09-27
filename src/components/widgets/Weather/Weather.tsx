@@ -20,7 +20,7 @@ export const Weather = () => {
       : "";
 
   return (
-    <div className="col-span-2 flex flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-white">
+    <div className="col-span-2 flex h-full w-full flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-white">
       <span className="text-2xl font-semibold">
         {data?.current.temperature_2m}
         {data?.current_units.temperature_2m}

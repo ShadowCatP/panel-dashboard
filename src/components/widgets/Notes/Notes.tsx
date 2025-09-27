@@ -49,7 +49,7 @@ export const Notes = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-white">
+    <div className="flex h-full w-full flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-white">
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={notes} strategy={verticalListSortingStrategy}>
           {notes.map((note) => (

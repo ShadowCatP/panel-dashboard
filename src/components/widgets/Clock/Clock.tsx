@@ -14,7 +14,7 @@ export const Clock = () => {
   }, []);
 
   return (
-    <div className="font-lexend row-span-2 flex flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-4xl font-bold text-white">
+    <div className="font-lexend flex h-full w-full flex-col items-center gap-2 rounded-lg bg-neutral-600 px-8 py-2 text-4xl font-bold text-white">
       <div className="flex gap-2">{parseDate(time, is24Format)}</div>
       <button
         onClick={() => setIs24Format((prev) => !prev)}

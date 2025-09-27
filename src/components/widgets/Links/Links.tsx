@@ -43,7 +43,7 @@ export const Links = () => {
   };
 
   return (
-    <div className="flex items-center justify-center rounded-lg bg-neutral-600 px-8 py-5 text-white">
+    <div className="flex h-full w-full items-center justify-center rounded-lg bg-neutral-600 px-8 py-5 text-white">
       <div className="grid grid-cols-[repeat(3,min-content)] items-center justify-items-center gap-4">
         <DndContext
           collisionDetection={closestCenter}
